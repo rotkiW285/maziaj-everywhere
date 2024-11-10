@@ -1,12 +1,17 @@
-#svgbackground {
+#maziaj {
   position: fixed;
   top: 5px;
   left: 400px;
   width: 1000px;
   height: 950px;
-  display: none;
   background-image: url('https://czyvulcanapojebalo.pl/assets/maziaj.svg');
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
+}
+
+@media (max-width: 800px) {
+  #maziaj {
+    left: 0;
+  }
 }

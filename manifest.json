@@ -2,11 +2,11 @@
   "manifest_version": 3,
   "name": "Maziaj everywhere",
   "version": "1.0",
-  "description": "Dodaje Maziaj do wszystkich stron",
+  "description": "Adds Maziaj to all sites",
   "permissions": ["storage", "activeTab", "scripting"],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "SVG Background Toggle"
+    "default_title": "Maziaj everywhere"
   },
   "content_scripts": [
     {
@@ -19,5 +19,15 @@
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{e37b5f40-9ef3-11ef-b864-0242ac120002}",
+      "strict_min_version": "109.0"
+    },
+    "gecko_android": {
+      "id": "{e37b5f40-9ef3-11ef-b864-0242ac120002}",
+      "strict_min_version": "113.0"
+    }
   }
 }

@@ -1,22 +1,22 @@
 const svgDiv = document.createElement('div');
-svgDiv.id = 'svgbackground';
+svgDiv.id = 'maziaj';
 document.body.appendChild(svgDiv);
 
-function setSvgBackground(isChecked) {
-    const svgbackground = document.getElementById('svgbackground');
+function setmaziaj(isChecked) {
+    const maziaj = document.getElementById('maziaj');
     if (isChecked) {
-        svgbackground.style.display = 'block';
+        maziaj.style.display = 'block';
     } else {
-        svgbackground.style.display = 'none';
+        maziaj.style.display = 'none';
     }
 }
 
 chrome.storage.local.get(['toggleCheckboxStatus'], function(result) {
-    setSvgBackground(!!result.toggleCheckboxStatus);
+    setmaziaj(!!result.toggleCheckboxStatus);
 });
 
 chrome.storage.onChanged.addListener(function(changes, namespace) {
     if (changes.toggleCheckboxStatus) {
-        setSvgBackground(!!changes.toggleCheckboxStatus.newValue);
+        setmaziaj(!!changes.toggleCheckboxStatus.newValue);
     }
 });

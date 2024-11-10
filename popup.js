@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
                 chrome.scripting.executeScript({
                     target: {tabId: tabs[0].id},
-                    function: updateSvgBackground,
+                    function: updatemaziaj,
                     args: [toggleCheckbox.checked]
                 });
             });
@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-function updateSvgBackground(isChecked) {
-    var svgbackground = document.getElementById('svgbackground');
+function updatemaziaj(isChecked) {
+    var maziaj = document.getElementById('maziaj');
     if (isChecked) {
-        svgbackground.style.display = 'block';
+        maziaj.style.display = 'block';
     } else {
-        svgbackground.style.display = 'none';
+        maziaj.style.display = 'none';
     }
 }
